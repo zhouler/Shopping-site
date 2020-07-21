@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>详情页</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/proList.css"/>
+	</head>
+	<body>
+		<!------------------------------head------------------------------>
+		<div class="head">
+			<div class="wrapper clearfix">
+				<div class="clearfix" id="top">
+					<h1 class="fl"><a href="../../"><img  src="/static/img/logo.png"  /></a></h1>
+					<div class="fr clearfix" id="top1">
+						<p class="fl">
+							<a href="../../../login/" id="login">登录</a>
+							<a href="../../../register/" id="reg">注册</a>
+						</p>
+						<form action="#" method="get" class="fl">
+							<input type="text" placeholder="热门搜索：干花花瓶" />
+							<input type="button" />
+						</form>
+						<div class="btn fl clearfix">
+							<a href="../../personal_index"><img src="/static/img/grzx.png"/></a>
+							<a href="#" class="er1"><img src="/static/img/ewm.png"/></a>
+							<a href="../../personal_shopcar"><img src="/static/img/gwc.png"/></a>
+							<p><a href="#"><img src="/static/img/smewm.png"/></a></p>
+						</div>
+					</div>
+				</div>
+				<ul class="clearfix" id="bott">
+					<li ><a href="../../" >首页</a></li>
+					<li>
+						<a href="../../../all_products/">所有商品</a>
+
+					</li>
+					<li>
+						<a href="../../../products_types/5/">服装家纺</a>
+
+					</li>
+					<li>
+						<a href="../../../products_types/3/">美容护肤</a>
+					</li>
+					<li><a href="../../../products_types/2/">日用百货</a></li>
+					<li><a href="../../../products_types/1/">食物饮品</a></li>
+					<li><a href="../../../products_types/4/">电器数码</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-----------------address------------------------------->
+		<div class="address">
+			<div class="wrapper clearfix">
+				<a href="../../../../">首页</a>
+                <span>/</span>
+				<a href="../../../products_types/{{ good.type_id }}">{{ good.type }}</a>
+				<span>/</span>
+				<a href="#" class="on">{{ good.title }}</a>
+			</div>
+		</div>
+		<!-----------------------Detail------------------------------>
+		<div class="detCon">
+			<div class="proDet wrapper">
+				<div class="proCon clearfix">
+					<div class="proImg fl">
+						<img class="det" src="/static/media/{{ good.picture }}" />
+						<div class="smallImg clearfix">
+							<img src="/static/media/{{ good.picture1 }}" data-src="/static/media/{{ good.picture1 }}">
+							<img src="/static/media/{{ good.picture2 }}" data-src="/static/media/{{ good.picture2 }}">
+							<img src="/static/media/{{ good.picture3 }}" data-src="/static/media/{{ good.picture3 }}">
+							<img src="/static/media/{{ good.picture4 }}" data-src="/static/media/{{ good.picture4 }}">
+
+						</div>
+					</div>
+					<div class="fr intro">
+						<div class="title">
+							<h4> {{ good.title }}</h4>
+							<p>{{ good.desc }}</p>
+							<span>￥{{ good.price }}</span>
+						</div>
+						<div class="proIntro">
+							<p>颜色分类</p>
+							<div class="smallImg clearfix categ">
+								<p class="fl"><img src="/static/media/{{ good.picture_color1 }}" alt="白瓷花瓶+20支快乐花" data-src="/static/media/{{ good.picture_color1 }}"></p>
+								<p class="fl"><img src="/static/media/{{ good.picture_color2 }}" alt="白瓷花瓶+20支快乐花" data-src="/static/media/{{ good.picture_color2 }}"></p>
+								<p class="fl"><img src="/static/media/{{ good.picture_color3 }}" alt="白瓷花瓶+20支快乐花" data-src="/static/media/{{ good.picture_color3 }}"></p>
+								<p class="fl"><img src="/static/media/{{ good.picture_color4 }}" alt="白瓷花瓶+20支快乐花" data-src="/static/media/{{ good.picture_color4 }}"></p>
+							</div>
+							<p>
+                                库存 <span>{{ good.quantity }}</span> {{ good.unit }}
+                                月销量 <span>{{ good.sales }}</span>
+
+                            </p>
+
+							<div class="num clearfix">
+								<img class="fl sub" src="/static/imgs/temp/sub.jpg">
+								<span class="fl" id="number" contentEditable="true">1</span>
+								<img class="fl add" src="/static/imgs/temp/add.jpg">
+								<p class="please fl">请选择商品属性!</p>
+							</div>
+						</div>
+						<div class="btns clearfix">
+                            <form action="../../pay/" method="post" id="_form">
+                            <input checked="checked" type="checkbox" name="goods" value="{{ good.id }}" style="display: none">
+
+							<a href="#"><p class="buy fl" onclick="document.getElementById('_form').submit();">立即购买</p></a>
+                            </form>
+							<a href="#2"><p class="cart fr" id="jia" rel="{{ good.id }}">加入购物车</p></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="introMsg wrapper clearfix">
+			<div class="msgL fl">
+				<div class="msgTit clearfix">
+					<a class="on">商品详情</a>
+					<a>所有评价</a>
+				</div>
+				<div class="msgAll">
+					<div class="msgImgs">
+						{{ good.content|safe }}
+					</div>
+					<div class="eva">
+
+                        {% for foo in comment %}
+                            <div class="per clearfix">
+							<img class="fl" style="margin-top: -5px" src="/static/media/{{ foo.username.avatar }}" width="16px" height="16px" >
+							<div class="perR fl">
+								<p>{{ foo.username }}</p>
+								<p>{{ foo.content|safe }}</p>
+								<p><span>{{ foo.time }}</span><span>评价类型：{{ foo.type }}</span></p>
+							</div>
+						</div>
+                        {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					</div>
+				</div>
+			</div>
+			<div class="msgR fr">
+				<h4>为你推荐</h4>
+				<div class="seeList">
+					<a href="#">
+						<dl>
+							<dt><img src="/static/imgs/temp/see01.jpg"></dt>
+							<dd>【最家】复古文艺风玻璃花瓶</dd>
+							<dd>￥193.20</dd>
+						</dl>
+					</a>
+					<a href="#">
+						<dl>
+							<dt><img src="/static/imgs/temp/see02.jpg"></dt>
+							<dd>【最家】复古文艺风玻璃花瓶</dd>
+							<dd>￥193.20</dd>
+						</dl>
+					</a>
+					<a href="#">
+						<dl>
+							<dt><img src="/static/imgs/temp/see03.jpg"></dt>
+							<dd>【最家】复古文艺风玻璃花瓶</dd>
+							<dd>￥193.20</dd>
+						</dl>
+					</a>
+					<a href="#">
+						<dl>
+							<dt><img src="/static/imgs/temp/see04.jpg"></dt>
+							<dd>【最家】复古文艺风玻璃花瓶</dd>
+							<dd>￥193.20</dd>
+						</dl>
+					</a>
+				</div>
+				
+			</div>
+		</div>
+		<div class="like">
+			<h4>猜你喜欢</h4>
+			<div class="bottom">
+				<div class="hd">
+					<span class="prev"><img src="/static/imgs/temp/prev.png"></span>
+					<span class="next"><img src="/static/imgs/temp/next.png"></span>
+				</div>
+				<div class="imgCon bd">
+					<div class="likeList clearfix">
+						<div>
+							<a href="proDetail.html">
+								<dl>
+									<dt><img src="/static/imgs/temp/like01.jpg"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+							<a href="proDetail.html">
+								<dl>
+									<dt><img src="/static/imgs/temp/like02.jpg"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+							<a href="proDetail.html">
+								<dl>
+									<dt><img src="/static/imgs/temp/like03.jpg"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+							<a href="proDetail.html">
+								<dl>
+									<dt><img src="/static/imgs/temp/like04.jpg"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+							<a href="proDetail.html" class="last">
+								<dl>
+									<dt><img src="/static/imgs/temp/like05.jpg"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+						</div>
+						<div>
+							<a href="proDetail.html">
+								<dl>
+									<dt><img src="/static/imgs/temp/like01.jpg"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+							<a href="proDetail.html">
+								<dl>
+									<dt><img src="/static/imgs/temp/like02.jpg"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+							<a href="proDetail.html">
+								<dl>
+									<dt><img src="/static/imgs/temp/like03.jpg"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+							<a href="proDetail.html">
+								<dl>
+									<dt><img src="/static/imgs/temp/like04.jpg"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+							<a href="proDetail.html" class="last">
+								<dl>
+									<dt><img src="/static/imgs/temp/like05.jpg"></dt>
+									<dd>【最家】复古文艺风玻璃花瓶</dd>
+									<dd>￥193.20</dd>
+								</dl>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--返回顶部-->
+		<div class="gotop" style="top: 400px;right: 8px">
+			<a href="../../personal_shopcar/">
+			<dl>
+				<dt><img src="/static/img/gt1.png"/></dt>
+				<dd>去购<br />物车</dd>
+			</dl>
+			</a>
+
+			<a href="../../personal_index">
+			<dl>
+				<dt><img src="/static/img/gt3.png"/></dt>
+				<dd>个人<br />中心</dd>
+			</dl>
+			</a>
+			<a href="#" class="toptop" style="display: none">
+			<dl>
+				<dt><img src="/static/img/gt4.png"/></dt>
+				<dd>返回<br />顶部</dd>
+			</dl>
+			</a>
+			<p>400-800-8200</p>
+		</div>
+
+		<div class="msk"></div>
+		<!--footer-->
+		<div class="footer">
+			<div class="top">
+				<div class="wrapper">
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="/static/imgs/foot1.png"/></a>
+						<span class="fl">7天无理由退货</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="/static/imgs/foot2.png"/></a>
+						<span class="fl">15天免费换货</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="/static/imgs/foot3.png"/></a>
+						<span class="fl">满599包邮</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="/static/imgs/foot4.png"/></a>
+						<span class="fl">手机特色服务</span>
+					</div>
+				</div>
+			</div>
+			<p class="dibu">最家家居&copy;2013-2017公司版权所有 京ICP备080100-44备0000111000号<br />
+			违法和不良信息举报电话：188-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+		</div>
+		<script src="/static/js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/nav.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/pro.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/cart.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			jQuery(".bottom").slide({titCell:".hd ul",mainCell:".bd .likeList",autoPage:true,autoPlay:false,effect:"leftLoop",autoPlay:true,vis:1});
+		</script>
+
+    <script>
+
+$(function(){
+    $("#jia").click(function(){
+
+        var zambia1 = $(this);
+        var id = zambia1.attr("rel"); //对应商品的id
+        var number=document.getElementById("number")
+        {#alert(number.innerText)#}
+        $.ajax({
+
+            type:"POST",//GET
+            url:"/join_gouwuche",
+            data: {
+            id: id,
+            number: number.innerText,
+
+        },
+
+            success:function(data){
+                alert(data)
+
+
+            }
+        });
+        return false;
+    });
+})
+
+{#通过ajax 发送post请求#}
+ $(function(){
+    $("#goumai").click(function(){
+
+        var zambia1 = $(this);
+        var id = zambia1.attr("rel"); //对应商品的id
+        var number=document.getElementById("number") //对应商品的数量
+
+        $.ajax({
+
+            type:"POST",//GET
+            url:"/place_an_order",
+            data: {//data就发送到后端进行处理的
+            id: id,
+            number: number.innerText,
+            price:{{ good.price }},
+        },
+
+            success:function(data){//请求成功了
+                alert(data)
+                window.location.href="../../order";
+
+            }
+        });
+        return false;
+    });
+     })
+
+
+
+
+    </script>
+
+	</body>
+</html>

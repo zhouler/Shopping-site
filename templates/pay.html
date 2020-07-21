@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8" />
+		<title>order</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/proList.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/mygxin.css" />
+	</head>
+	<body>
+		<!----------------------------------------order------------------>
+		<div class="head">
+			<div class="wrapper clearfix">
+				<div class="clearfix" id="top">
+					<h1 class="fl"><a href="../../"><img  src="/static/img/logo.png"  /></a></h1>
+					<div class="fr clearfix" id="top1">
+						<p class="fl">
+							<a href="../../../login/" id="login">登录</a>
+							<a href="../../../register/" id="reg">注册</a>
+						</p>
+						<form action="#" method="get" class="fl">
+							<input type="text" placeholder="热门搜索：干花花瓶" />
+							<input type="button" />
+						</form>
+						<div class="btn fl clearfix">
+							<a href="../../personal_index"><img src="/static/img/grzx.png"/></a>
+							<a href="#" class="er1"><img src="/static/img/ewm.png"/></a>
+							<a href="../../personal_shopcar"><img src="/static/img/gwc.png"/></a>
+							<p><a href="#"><img src="/static/img/smewm.png"/></a></p>
+						</div>
+					</div>
+				</div>
+				<ul class="clearfix" id="bott">
+					<li ><a href="../../" >首页</a></li>
+					<li>
+						<a href="../../../all_products/">所有商品</a>
+
+					</li>
+					<li>
+						<a href="../../../products_types/5/">服装家纺</a>
+
+					</li>
+					<li>
+						<a href="../../../products_types/3/">美容护肤</a>
+					</li>
+					<li><a href="../../../products_types/2/">日用百货</a></li>
+					<li><a href="../../../products_types/1/">食物饮品</a></li>
+					<li><a href="../../../products_types/4/">电器数码</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="order cart mt">
+			<!-----------------site------------------->
+			<div class="site">
+				<p class="wrapper clearfix">
+					<span class="fl">订单确认</span>
+					<img class="top" src="/static/img/temp/cartTop02.png">
+				</p>
+			</div>
+			<!-----------------orderCon------------------->
+            <form action="../../../ok/" method="post" id="_form" onsubmit="return func()">
+			    <div class="orderCon wrapper clearfix">
+				<div class="orderL fl">
+					<!--------h3---------------->
+					<h3>收件信息<a href="#" class="fr" id="addxad">新增地址</a></h3>
+					<!--------addres---------------->
+					<div class="addres clearfix">
+
+                        {% for foo in A %}
+
+                            <div class="addre fl " id="div_{{ foo.id }}">
+
+							<div class="tit clearfix">
+								<p class="fl">{{ foo.receiver_name }}
+									<span class="default">[默认地址]</span>
+								</p>
+								<p class="fr">
+									<a href="#" class="del">删除</a>
+									<span>|</span>
+									<a href="#" class="edit">编辑</a>
+								</p>
+							</div>
+							<div class="addCon">
+								<p>{{ foo.area }} {{ foo.ads }}</p>
+								<p>{{ foo.phone }}</p>
+                                <span style="margin-left: 230px"><span style="float: right;margin-top: -2px">< 请勾选</span>
+                                    <input type="radio" name="add" value="{{ foo.id }}"  >
+                                </span>
+
+							</div>
+						</div>
+                        {% endfor %}
+
+
+
+					</div>
+					<h3>支付方式</h3>
+					<!--------way---------------->
+					<div class="way clearfix">
+						<img class="on" src="/static/img/temp/way01.jpg"> 
+						<img src="/static/img/temp/way02.jpg"> 
+						<img src="/static/img/temp/way03.jpg"> 
+						<img src="/static/img/temp/way04.jpg"> 
+					</div>
+					<h3>选择快递</h3>
+					<!--------dis---------------->
+					<div class="dis clearfix">
+						<span class="on">顺风快递</span>
+						<span>百世汇通</span>
+						<span>圆通快递</span>
+						<span>中通快递</span>
+					</div>
+				</div>
+				<div class="orderR fr">
+					<div class="msg">
+						<h3>订单内容<a href="cart.html" class="fr">返回购物车</a></h3>
+						<!--------ul---------------->
+
+                        {% for foo in list %}
+                            <input type="text" name="order_id"  value="{{ foo.id }}" style="display: none">
+
+                            <ul class="clearfix">
+							<li class="fl">
+								<img src="/static/media/{{ foo.goods.picture }}" style="height: 87px;width: 87px">
+							</li>
+							<li class="fl">
+								<p>{{ foo.goods.title }}</p>
+								<p>颜色分类：烟灰色玻璃瓶</p>
+								<p>数量：{{ foo.acot }} * {{ foo.goods.price }}</p>
+							</li>
+							<li class="fr" >￥{%  widthratio foo.goods.price 1 foo.acot %}</li>
+						</ul>
+                        {% endfor %}
+
+
+
+					</div>
+					<!--------tips---------------->
+					<div class="tips">
+						<p><span class="fl">商品金额：</span><span class="fr">￥{{ list_price }}</span></p>
+						<p><span class="fl">优惠金额：</span><span class="fr">￥0.00</span></p>
+						<p><span class="fl">运费：</span><span class="fr">{{ list_yunfei }} </span></p>
+					</div>
+					<!--------tips count---------------->
+					<div class="count tips">
+						<p><span class="fl">合计：</span><span class="fr">￥{{ list_price }}</span></p>
+					</div>
+
+					<a href="javascript:;" class="pay" onclick="document.getElementById('_form').submit();" >去支付</a>
+				</div>
+			</div>
+            </form>
+		</div>
+		<!--编辑弹框-->
+		<!--遮罩-->
+		<div class="mask"></div>
+		<div class="adddz editAddre" style="top: 250px">
+			<form action="#" method="get">
+				<input type="text" placeholder="姓名" class="on" />
+				<input type="text" placeholder="手机号" />
+				<div class="city">
+					<select name="">
+						<option value="省份/自治区">省份/自治区</option>
+					</select>
+					<select>
+						<option value="城市/地区">城市/地区</option>
+					</select>
+					<select>
+						<option value="区/县">区/县</option>
+					</select>
+					<select>
+						<option value="配送区域">配送区域</option>
+					</select>
+				</div>
+				<textarea name="" rows="" cols="" placeholder="详细地址"></textarea>
+				<input type="text" placeholder="邮政编码" />
+				<div class="bc">
+					<input type="button" value="保存" />
+					<input type="button" value="取消" />
+				</div>
+			</form>
+		</div>
+		<!--返回顶部-->
+
+		<!--footer-->
+		<div class="footer">
+			<div class="top">
+				<div class="wrapper">
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="/static/img/foot1.png"/></a>
+						<span class="fl">7天无理由退货</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="/static/img/foot2.png"/></a>
+						<span class="fl">15天免费换货</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="/static/img/foot3.png"/></a>
+						<span class="fl">满599包邮</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="/static/img/foot4.png"/></a>
+						<span class="fl">手机特色服务</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script src="/static/js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/pro.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/user.js" type="text/javascript" charset="utf-8"></script>
+
+        <script>
+
+
+function func(){
+         return false;
+       }
+
+        </script>
+    </body>
+</html>

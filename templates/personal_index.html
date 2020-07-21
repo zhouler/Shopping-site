@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会员中心</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/js/selectivizr-min.js"></script>
+    <script src="/static/js/style.js"></script>
+</head>
+<body>
+
+<!--------顶部----------->
+<div class="header_top">
+    <div class="container">
+        <div class="left">
+
+            <b><img src="/static/images/phone.png" alt="" class="phone">手机客户端下载</b>
+        </div>
+        <div class="right">
+              <ul>
+                <li>尊敬的  <font color="red" >{{ L.nickname }}</font> 您好!</li>
+				<li>&nbsp;&nbsp;&nbsp;账户余额：{{ B.amount }}</li>
+                <li>|</li>
+                <li class="li_drop">
+                    <a href="../../personal_index/">会员中心<img src="/static/images/arrow_down.png" class="arrow_down" alt=""></a>
+                    <ul>
+                        <li><a href="../../personal_order/">全部订单</a></li>
+                        <li><a href="../../personal_info/">个人信息</a></li>
+                        <li><a href="../../personal_login_pass/">登录密码</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../quit/">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-------会员中心导航-------->
+<div class="member_navbar">
+    <div class="member_nav">
+        <a href="#" class="logo"><img src="/static/images/logo_white.png" alt=""></a>
+        <ul>
+            <li><a href="../../personal_index/" class="active">会员首页</a></li>
+            <li><a href="../../personal_account/" >账户安全</a></li>
+        </ul>
+        <a href="../../" class="back">返回主页</a>
+    </div>
+</div>
+
+
+
+<!---------内容--------->
+<div class="member">
+    <div class="left_nav">
+       <ul>
+            <li class="active">
+                <a href="../../personal_index/" >个人首页</a>
+            </li>
+            <li>
+                <a href="javascript:;" class="active">个人设置</a>
+                <ul >
+                    <li><a href="../../personal_info/">个人资料</a></li>
+
+                    <li><a href="../../personal_address/">收货地址</a></li>
+
+                    <li><a href="../../personal_login_pass/">重置登录密码</a></li>
+					<li><a href="../../personal_resetPay/">重置支付密码</a></li>
+                </ul>
+            </li>
+
+            <li > <a href="../../personal_order/">订单管理</a></li>
+
+            <li ><a href="../../personal_comment/">我的评论</a>
+
+			</li>
+
+             <li><a href="javascript:;">购物/收藏</a>
+			     <ul>
+                    <li><a href="../../personal_shopcar/">我的购物车</a></li>
+					<li><a href="../../personal_shoucang/">我的收藏夹</a></li>
+                </ul>
+			</li>
+
+            <li><a href="javascript:;">账户余额</a>
+			     <ul>
+                    <li><a href="javascript:;">余额充值</a></li>
+					<li><a href="javascript:;">消费记录</a></li>
+					 <li><a href="javascript:;">充值记录</a></li>
+					<li><a href="javascript:;">退款记录</a></li>
+                </ul>
+			</li>
+
+            <li><a href="javascript:;">我是卖家</a>
+			     <ul>
+                    <li><a href="../../personal_post/">发布商品</a></li>
+					<li><a href="javascript:;">修改商品</a></li>
+                    <li><a href="javascript:;">删除商品</a></li>
+					<li><a href="javascript:;">处理退款</a></li>
+                </ul>
+			</li>
+        </ul>
+    </div>
+    <div class="member_right">
+        <div class="member_right_top">
+            <div class="member_info">
+                <div class="info_top">
+                    <div class="info_logo">
+                        <img src="/static/images/member_touxiang.png" alt="">
+                    </div>
+                    <div class="info">
+                        <ul>
+                            <li><span>用户名：{{ L.username}}</span></li>
+                            <li><span>手机号：{{ L.phone}}（已绑定）</span><b>修改</b></li>
+                            <li><span>邮箱号码：{{ L.email}}（已实名）</span></li>
+                            <li><span>用户等级：普通用户</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info_bottom">
+                    <ul>
+                        <li>
+                            <b>积分余额</b>
+                            <span>
+                            <img src="/static/images/integral.png" alt="">
+                            <em>7600</em>
+                            <small>积分</small>
+                        </span>
+                        </li>
+                        <li>
+                            <b>预付卡余额</b>
+                            <span>
+                            <img src="/static/images/money.png" alt="">
+                            <em>{{ B.amount }}</em>
+                            <small>人民币</small>
+                        </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="member_notice">
+                <div class="notice_title">
+                    <img src="/static/images/notice.png" alt="">
+                    <b>系统公告</b>
+                    <a href="#" class="more">更多</a>
+                </div>
+                <ul>
+                    <li><a href="#"><b>1.</b>坐落于享誉盛名的外滩中心</a></li>
+                    <li><a href="#"><b>2.</b>坐落于享誉盛名的外滩中心</a></li>
+                    <li><a href="#"><b>3.</b>坐落于享誉盛名的外滩中心</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="member_order">
+            <h3>我的订单</h3>
+            <ul>
+                <li>
+                    <span>
+                        <img src="/static/images/planes_logo.jpg" alt="">
+                    </span>
+                    <b>
+                        <i>南昌--北京  CA1582</i>
+                        <em>预订时间：2016-10-31 14:57:47</em>
+                    </b>
+                    <small>￥380.00</small>
+                    <a href="personal_ordershow.html">查看详情</a>
+                </li>
+                <li>
+                    <span>
+                        <img src="/static/images/planes_logo.jpg" alt="">
+                    </span>
+                    <b>
+                        <i>南昌--北京  CA1582</i>
+                        <em>预订时间：2016-10-31 14:57:47</em>
+                    </b>
+                    <small>￥380.00</small>
+                    <a href="personal_ordershow.html">查看详情</a>
+                </li>
+                <li>
+                    <span>
+                        <img src="/static/images/planes_logo.jpg" alt="">
+                    </span>
+                    <b>
+                        <i>南昌--北京  CA1582</i>
+                        <em>预订时间：2016-10-31 14:57:47</em>
+                    </b>
+                    <small>￥380.00</small>
+                    <a href="personal_ordershow.html">查看详情</a>
+                </li>
+                <li>
+                    <span>
+                        <img src="/static/images/planes_logo.jpg" alt="">
+                    </span>
+                    <b>
+                        <i>南昌--北京  CA1582</i>
+                        <em>预订时间：2016-10-31 14:57:47</em>
+                    </b>
+                    <small>￥380.00</small>
+                    <a href="personal_ordershow.html">查看详情</a>
+                </li>
+                <li>
+                    <span>
+                        <img src="/static/images/planes_logo.jpg" alt="">
+                    </span>
+                    <b>
+                        <i>南昌--北京  CA1582</i>
+                        <em>预订时间：2016-10-31 14:57:47</em>
+                    </b>
+                    <small>￥380.00</small>
+                    <a href="personal_ordershow.html">查看详情</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+<!----------底部----------->
+
+</body>
+</html>

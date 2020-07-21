@@ -1,0 +1,37 @@
+    # mkdir 文件夹名字
+    # django-admin startproject 项目名
+    # django-admin  startapp 应用名
+
+    # python manage.py createsuperuser 设置密码
+    # python manage.py runserver 重新启动
+
+    # python manage.py makemigrations 迁移
+    # python manage.py migrate
+
+    #m:与数据库交互，使用内嵌的orm引擎，
+    #v:接收请求，业务处理，判断用户是否合法
+    #t:封装html css js 前端内容模板的引擎
+
+
+    # '''
+    # #manage.py sheel
+    # #from 项目名.models import *
+    # Tag.objects.all() 返回Tag里面的内容
+    # 必须要有返回值 不然只有objects对象
+    #
+    # Category.objects.get(id=1)
+    #
+    # t=Tag()实例化
+    # t.tag_name='zl' 增加新的字段
+    # t.save()保存
+    #
+    #
+    # from django.utils import timezone
+    # p.created_time=timezone.now()
+    # p.modif
+    #
+    # '''
+
+    123456
+    123456
+    8888

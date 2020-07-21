@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load filter  %}
+<head>
+
+    <meta charset="UTF-8">
+    <title>订单管理</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="/static/css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/mygxin.css" />
+
+    <script src="/static/js/jquery-1.10.2.min.js"></script>
+    <script src="/static/js/selectivizr-min.js"></script>
+    <script src="/static/js/style.js"></script>
+
+    <link rel="stylesheet" href="/static/css/carts.css">
+
+        <link rel="stylesheet" type="text/css" href="/static/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css">
+        <script type="text/javascript" src="/static/ueditor/third-party/SyntaxHighlighter/shCore.js"></script>
+        <script type="text/javascript" src="/static/ueditor/ueditor.config.js"></script>
+        <script type="text/javascript" src="/static/ueditor/ueditor.all.min.js"></script>
+        <script type="text/javascript" src="/static/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+</head>
+<style>
+    .goods_title{
+        width: 90px;
+        float: left;
+        margin-top: 17px;
+        word-wrap:break-word;
+        word-break:break-all;
+        height: auto;
+        overflow: hidden;
+    }
+    .baoyou{
+
+        margin-left: 40px;
+        width: 50px;
+        height: 20px;
+        background: #ff9a00;
+        color: #fff;
+        line-height: 20px;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        z-index: 2;
+        font-size: 12px;
+        font-style: normal;
+        display: block;
+        border-radius: 1px;
+    }
+    .tuihuan{
+        background: #00aef3;
+        margin-left: 40px;
+        width: 80px;
+        height: 20px;
+        color: #fff;
+        line-height: 20px;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        z-index: 2;
+        font-size: 12px;
+        font-style: normal;
+        display: block;
+        border-radius: 1px;
+    }
+</style>
+<body>
+
+<!--------顶部----------->
+<div class="header_top">
+    <div class="container">
+        <div class="left">
+
+            <b><img src="/static/images/phone.png" alt="" class="phone">手机客户端下载</b>
+        </div>
+        <div class="right">
+              <ul>
+                <li>尊敬的  <font color="red" >{{ L.nickname }}</font> 您好!</li>
+				<li>&nbsp;&nbsp;&nbsp;账户余额：{{ B.amount }}</li>
+                <li>|</li>
+                <li class="li_drop">
+                    <a href="../../personal_index/">会员中心<img src="/static/images/arrow_down.png" class="arrow_down" alt=""></a>
+                    <ul>
+                        <li><a href="../../personal_order/">全部订单</a></li>
+                        <li><a href="../../personal_info/">个人信息</a></li>
+                        <li><a href="../../personal_login_pass/">登录密码</a></li>
+                    </ul>
+                </li>
+                <li><a href="../../quit/">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-------会员中心导航-------->
+<div class="member_navbar">
+    <div class="member_nav">
+        <a href="#" class="logo"><img src="/static/images/logo_white.png" alt=""></a>
+        <ul>
+            <li><a href="../../personal_index/" class="active">会员首页</a></li>
+            <li><a href="../../personal_account/" >账户安全</a></li>
+        </ul>
+        <a href="../../" class="back">返回主页</a>
+    </div>
+</div>
+
+
+
+<div class="member">
+    <div class="left_nav">
+
+ <ul>
+            <li>
+                <a href="../../personal_index/">个人首页</a>
+            </li>
+            <li>
+                <a href="javascript:;">个人设置</a>
+                <ul>
+                    <li><a href="../../personal_info/">个人资料</a></li>
+                    <li><a href="../../personal_address/">收货地址</a></li>
+                    <li><a href="../../personal_login_pass/">重置登录密码</a></li>
+					<li><a href="../../personal_resetPay/">重置支付密码</a></li>
+                </ul>
+            </li>
+
+            <li class="active"> <a href="">订单管理</a></li>
+
+            <li ><a href="../../personal_comment/">我的评论</a>
+
+            <li><a href="javascript:;">购物/收藏</a>
+			     <ul>
+                    <li><a href="../../personal_shopcar/">我的购物车</a></li>
+					<li><a href="../../personal_shoucang/">我的收藏夹</a></li>
+                </ul>
+			</li>
+
+			</li>
+            <li><a href="javascript:;">账户余额</a>
+			     <ul>
+                    <li><a href="javascript:;">余额充值</a></li>
+					<li><a href="javascript:;">消费记录</a></li>
+					 <li><a href="javascript:;">充值记录</a></li>
+					<li><a href="javascript:;">退款记录</a></li>
+                </ul>
+			</li>
+
+            <li><a href="javascript:;">我是卖家</a>
+			     <ul>
+                    <li><a href="../../personal_post/">发布商品</a></li>
+					<li><a href="javascript:;">修改商品</a></li>
+                    <li><a href="javascript:;">删除商品</a></li>
+					<li><a href="javascript:;">处理退款</a></li>
+                </ul>
+			</li>
+        </ul>
+    </div>
+
+    <section class="model_bg"></section>
+    <section class="my_model">
+        <p class="title">删除宝贝<span class="closeModel">X</span></p>
+        <p >是否确认收货？</p>
+        <div class="opBtn"><a href="javascript:;" class="dialog-sure">确定</a><a href="javascript:;" class="dialog-close">关闭</a></div>
+    </section>
+
+    <div class="member_right">
+        <div class="personal_order">
+            <div class="order_title">
+                <ul>
+                    <li class="active">已支付</li>
+                    <li>未支付</li>
+                    <li>取消订单</li>
+                    <li>已收货</li>
+                </ul>
+            </div>
+            <div class="order_class">
+                <div class="class">
+                    <b>订单类型</b>
+                    <span><i>全部</i><img src="/static/images/slide_down.png" alt=""></span>
+                    <ul>
+                        <li>全部1</li>
+                        <li>全部2</li>
+                        <li>全部3</li>
+                    </ul>
+                </div>
+                <div class="order_date">
+                    <b>订单时间</b>
+                    <ul>
+                        <li>
+                            <input type="text" placeholder="2015-10-31">
+                            <img src="/static/images/date.png" alt="">
+                        </li>
+                        <li>
+                            <input type="text" placeholder="2015-10-31">
+                            <img src="/static/images/date.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="order_select_time">
+                    <ul>
+                        <li>最近三个月</li>
+                        <li>三个月</li>
+                        <li class="active">一年</li>
+                    </ul>
+                </div>
+            </div>
+
+{#            已支付#}
+            <div class="order_ul active">
+
+               {% for foo in C_yi %}
+                <div class="order_li">
+
+                    <div class="order_li_title">
+                        <ul>
+                            <li><b>订单：{{ foo.orderNo }}</b></li>
+                            <li><b>时间：{{ foo.time }}</b></li>
+                            <li><span>{{ foo.goods.user }}的店</span></li>
+                        </ul>
+                    </div>
+                    <div class="order_li_contain">
+                        <div class="order_li_ticket">
+                            <h3>{{ foo.orderstatus }}</h3>
+                            <div class="order_li_ticket_logo">
+                                <img src="/static/media/{{ foo.goods.picture }}" style="height: 70px;margin-top: 10px">
+
+                            </div>
+                            <div class="order_li_ticket_info" >
+                                <ul>
+                                    <li>
+                                        <p class="baoyou">包邮</p>
+                                    </li>
+
+                                    <li>
+                                        <p class="tuihuan">七天无理由退货</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="goods_title">
+                               <b><p >{{ foo.goods.title|safe|truncatechars_html:12 }}</p></b>
+                                <br>
+                               <p >{{ foo.goods.desc|safe|truncatechars_html:12 }}</p>
+                            </div>
+                        </div>
+                        <div class="order_li_ticket_num">
+                            <span style="margin-top: 49px;">￥{{   foo.acount |div:foo.acot  }}<i>*</i>{{ foo.acot }}单</span>
+                        </div>
+                        <div class="order_li_ticket_money">
+                            <b style="margin-top: 49px;">￥{{ foo.acount }}</b>
+                        </div>
+                        <div class="order_li_ticket_pay">
+
+                            <a href="#" class="pay pay1" onclick="window.queren={{ foo.id }}">确认收货</a>
+                        </div>
+                        <div class="order_li_ticket_more">
+                            <a href="../wuliu/{{ foo.id }}" style="margin-top: 39px;" ><span class="chakan">查看物流</span></a>
+                            <a href="" style="margin-top: 5px;" ><span class="shanchu" rel="{{ foo.id }}" >删除订单</span></a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+                <div class="page_next">
+                    <ul>
+                        <li class="on"><b>&lt;</b>上一页</li>
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li class="on">下一页<i>&gt;</i></li>
+                    </ul>
+                </div>
+            </div>
+
+{#            未支付#}
+            <div class="order_ul">
+
+                {% for foo in C_wei %}
+                  <form action="../pay/" method="post" id="{{ foo.id }}_form">
+
+                <div class="order_li">
+
+                    <div class="order_li_title">
+                        <ul>
+                            <li><b>订单：{{ foo.orderNo }}</b></li>
+                            <li><b>时间：{{ foo.time }}</b></li>
+                            <li><span>{{ foo.goods.user }}的店</span></li>
+                        </ul>
+                    </div>
+                    <div class="order_li_contain">
+                        <div class="order_li_ticket">
+                            <h3>{{ foo.orderstatus }}</h3>
+                            <div class="order_li_ticket_logo">
+                                <img src="/static/media/{{ foo.goods.picture }}" style="height: 70px;margin-top: 10px">
+
+                            </div>
+                            <div class="order_li_ticket_info" >
+                                <ul>
+                                    <li>
+                                        <p class="baoyou">包邮</p>
+                                    </li>
+
+                                    <li>
+                                        <p class="tuihuan">七天无理由退货</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="goods_title">
+                               <b><p >{{ foo.goods.title|safe|truncatechars_html:12  }}</p></b>
+                                <br>
+                               <p >{{ foo.goods.desc|safe|truncatechars_html:12  }}</p>
+                            </div>
+                        </div>
+                        <div class="order_li_ticket_num">
+                            <span style="margin-top: 49px;">￥{{   foo.acount |div:foo.acot  }}<i>*</i>{{ foo.acot }}单</span>
+                        </div>
+                        <div class="order_li_ticket_money">
+                            <b style="margin-top: 49px;">￥{{ foo.acount }}</b>
+                        </div>
+                        <div class="order_li_ticket_pay">
+
+                            <input checked="checked" type="checkbox" name="goods" value="{{ foo.goods_id }}" style="display: none">
+                            <a href="#" class="pay " onclick="document.getElementById('{{ foo.id }}_form').submit();" >立即支付</a>
+                        </div>
+                        <div class="order_li_ticket_more">
+                            <a href="../../detailpage/{{ foo.goods_id }}/" style="margin-top: 49px;" ><span class="chakan">查看详情</span></a>
+                            <a href="" style="margin-top: 5px;" ><span class="shanchu" rel="{{ foo.id }}" >删除订单</span></a>
+
+                        </div>
+                    </div>
+                </div>
+                    </form>
+                {% endfor %}
+
+
+                <div class="page_next">
+                    <ul>
+                        <li class="on"><b>&lt;</b>上一页</li>
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li class="on">下一页<i>&gt;</i></li>
+                    </ul>
+                </div>
+            </div>
+
+{#            取消订单#}
+            <div class="order_ul">
+
+                {% for foo in C_qu %}
+                    <form action="../pay/" method="post" id="{{ foo.id }}_form">
+                <div class="order_li">
+
+                    <div class="order_li_title">
+                        <ul>
+                            <li><b>订单：{{ foo.orderNo }}</b></li>
+                            <li><b>时间：{{ foo.time }}</b></li>
+                            <li><span>{{ foo.goods.user }}的店</span></li>
+                        </ul>
+                    </div>
+                    <div class="order_li_contain">
+                        <div class="order_li_ticket">
+                            <h3>{{ foo.orderstatus }}</h3>
+                            <div class="order_li_ticket_logo">
+                                <img src="/static/media/{{ foo.goods.picture }}" style="height: 70px;margin-top: 10px">
+
+                            </div>
+                            <div class="order_li_ticket_info" >
+                                <ul>
+                                    <li>
+                                        <p class="baoyou">包邮</p>
+                                    </li>
+
+                                    <li>
+                                        <p class="tuihuan">七天无理由退货</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="goods_title">
+                               <b><p >{{ foo.goods.title|safe|truncatechars_html:12  }}</p></b>
+                                <br>
+                               <p >{{ foo.goods.desc|safe|truncatechars_html:12  }}</p>
+                            </div>
+                        </div>
+                        <div class="order_li_ticket_num">
+                            <span style="margin-top: 49px;">￥{{   foo.acount |div:foo.acot  }}<i>*</i>{{ foo.acot }}单</span>
+                        </div>
+                        <div class="order_li_ticket_money">
+                            <b style="margin-top: 49px;">￥{{ foo.acount }}</b>
+                        </div>
+
+                        <div class="order_li_ticket_pay">
+                            <input checked="checked" type="checkbox" name="goods" value="{{ foo.goods_id }}" style="display: none">
+
+                            <a href="javascript:;" class="pay " onclick="document.getElementById('{{ foo.id }}_form').submit();">立即支付</a>
+
+                        </div>
+                        <div class="order_li_ticket_more">
+                            <a href="#" style="margin-top: 49px;" ><span class="chakan">查看详情</span></a>
+                            <a href="" style="margin-top: 5px;" ><span class="shanchu" rel="{{ foo.id }}" >删除订单</span></a>
+
+                        </div>
+                    </div>
+                </div>
+                    </form>
+                {% endfor %}
+
+                <div class="page_next">
+                    <ul>
+                        <li class="on"><b>&lt;</b>上一页</li>
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li class="on">下一页<i>&gt;</i></li>
+                    </ul>
+                </div>
+            </div>
+
+{#            已收货#}
+            <div class="order_ul">
+
+                {% for foo in C_shou %}
+                    <form action="../pay/" method="post" id="{{ foo.id }}_form">
+                <div class="order_li">
+
+                    <div class="order_li_title">
+                        <ul>
+                            <li><b>订单：{{ foo.orderNo }}</b></li>
+                            <li><b>时间：{{ foo.time }}</b></li>
+                            <li><span>{{ foo.goods.user }}的店</span></li>
+                        </ul>
+                    </div>
+                    <div class="order_li_contain">
+                        <div class="order_li_ticket">
+                            <h3>{{ foo.orderstatus }}</h3>
+                            <div class="order_li_ticket_logo">
+                                <img src="/static/media/{{ foo.goods.picture }}" style="height: 70px;margin-top: 10px">
+
+                            </div>
+                            <div class="order_li_ticket_info" >
+                                <ul>
+                                    <li>
+                                        <p class="baoyou">包邮</p>
+                                    </li>
+
+                                    <li>
+                                        <p class="tuihuan">七天无理由退货</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="goods_title">
+                               <b><p >{{ foo.goods.title|safe|truncatechars_html:12  }}</p></b>
+                                <br>
+                               <p >{{ foo.goods.desc|safe|truncatechars_html:12  }}</p>
+                            </div>
+                        </div>
+                        <div class="order_li_ticket_num">
+                            <span style="margin-top: 49px;">￥{{   foo.acount |div:foo.acot  }}<i>*</i>{{ foo.acot }}单</span>
+                        </div>
+                        <div class="order_li_ticket_money">
+                            <b style="margin-top: 49px;">￥{{ foo.acount }}</b>
+                        </div>
+
+                        <div class="order_li_ticket_pay">
+                            <input checked="checked" type="checkbox" name="goods" value="{{ foo.goods_id }}" style="display: none">
+
+                            <a href="javascript:;" class="pay " >已收货</a>
+
+                        </div>
+                        <div class="order_li_ticket_more">
+                            <a href="#" style="margin-top: 49px;" ><span class="chakan">查看详情</span></a>
+                            <a href="" style="margin-top: 5px;" ><span class="shanchu" rel="{{ foo.id }}" >删除订单</span></a>
+
+                        </div>
+                    </div>
+                </div>
+                    </form>
+                {% endfor %}
+
+                <div class="page_next">
+                    <ul>
+                        <li class="on"><b>&lt;</b>上一页</li>
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li class="on">下一页<i>&gt;</i></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+<!----------底部----------->
+
+
+<script>
+{#删除订单#}
+    $(function(){
+    $(".shanchu").click(function(){
+
+        var zambia1 = $(this);
+        var id = zambia1.attr("rel"); //对应商品的id
+
+        $.ajax({
+
+            type:"POST",//GET
+            url:"/delete_order",
+            data: {
+            id: id,
+        },
+
+            success:function(data){
+                alert(data)
+                window.location.reload()
+
+            }
+        });
+        return false;
+    });
+})
+
+    //	订单页面  修改地址
+	$(".pay1").click(function(){
+
+		$(".model_bg").show();
+		$(".my_model").show();
+	});
+
+
+
+        $(".dialog-close").click(function(){
+    $(".model_bg").hide();
+    $(".my_model").hide();
+});
+
+{#确认收货#}
+$(function(){
+    $(".dialog-sure").click(function(){
+    $(".model_bg").hide();
+    $(".my_model").hide();
+    alert(window.queren)
+        $.ajax({
+            type:"POST",
+            url:"/querenshouhuo",
+            data:"id="+window.queren,
+
+            cache:false, //不缓存此页面
+            success:function(data){
+                alert(data)
+            }
+        });
+
+
+    });
+})
+</script>
+        {# 用于页面的富文本#}
+        <script type="text/javascript">
+             var ue = UE.getEditor('edi');
+             SyntaxHighlighter.all();
+
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="utf-8" />
+		<title>最家</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/index.css" />
+	</head>
+	<body>
+		<!------------------------------head------------------------------>
+		<div class="head">
+			<div class="wrapper clearfix">
+				<div class="clearfix" id="top">
+					<h1 class="fl"><a href="../../"><img  src="/static/img/logo.png"  /></a></h1>
+					<div class="fr clearfix" id="top1">
+						<p class="fl">
+							<a href="../../../login/" id="login">登录</a>
+							<a href="../../../register/" id="reg">注册</a>
+						</p>
+						<form action="#" method="get" class="fl">
+							<input type="text" placeholder="热门搜索：干花花瓶" />
+							<input type="button" />
+						</form>
+						<div class="btn fl clearfix">
+							<a href="../../personal_index"><img src="/static/img/grzx.png"/></a>
+							<a href="#" class="er1"><img src="/static/img/ewm.png"/></a>
+							<a href="../../personal_shopcar"><img src="/static/img/gwc.png"/></a>
+							<p><a href="#"><img src="/static/img/smewm.png"/></a></p>
+						</div>
+					</div>
+				</div>
+				<ul class="clearfix" id="bott">
+					<li ><a href="../../" >首页</a></li>
+					<li>
+						<a href="../../../all_products/">所有商品</a>
+
+					</li>
+					<li>
+						<a href="../../../products_types/5/">服装家纺</a>
+
+					</li>
+					<li>
+						<a href="../../../products_types/3/">美容护肤</a>
+					</li>
+					<li><a href="../../../products_types/2/">日用百货</a></li>
+					<li><a href="../../../products_types/1/">食物饮品</a></li>
+					<li><a href="../../../products_types/4/">电器数码</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-------------------------banner--------------------------->
+		<div class="block_home_slider">
+			<div id="home_slider" class="flexslider">
+{#                主页轮播推荐#}
+				<ul class="slides">
+					<li>
+						<div class="slide">
+							<img src="/static/img/banner2.jpg"/>
+						</div>
+					</li>
+					<li>
+						<div class="slide">
+							<img src="/static/img/banner1.jpg"/>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!------------------------------news------------------------------>
+		<div class="news">
+
+		</div>
+		
+		<!------------------------------ad------------------------------>
+
+		
+		<!------------------------------people------------------------------>
+		<div class="people">
+			<div class="wrapper">
+				<h2>本月销量最高商品</h2><br>
+
+				<div class="pList clearfix tran">
+
+                    {% for foo in month_top_goods0_3 %}
+                        <a href="../detailpage/{{ foo.id }}">
+						<dl>
+							<dt>
+								<span class="abl"></span>
+								<img src="/static/media/{{ foo.picture }}" style="width: 286px;height: 286px" />
+								<span class="abr"></span>
+							</dt>
+							<dd>{{ foo.title }}</dd>
+							<dd><span>￥{{ foo.price }} </span>&emsp; 月销量 {{ foo.sales }}</dd>
+
+						</dl>
+					</a>
+                    {% endfor %}
+
+
+
+
+				</div>
+                <div class="pList clearfix tran">
+
+                    {% for foo in month_look_top_goods4_7 %}
+                        <a href="../detailpage/{{ foo.id }}">
+						<dl>
+							<dt>
+								<span class="abl"></span>
+								<img src="/static/media/{{ foo.picture }}" style="width: 286px;height: 286px" />
+								<span class="abr"></span>
+							</dt>
+							<dd>{{ foo.title }}</dd>
+							<dd><span>￥{{ foo.price }}</span>&emsp; 月销量 {{ foo.sales }}</dd>
+						</dl>
+					</a>
+                    {% endfor %}
+
+
+
+
+				</div>
+                <br>
+
+                <h2>本月浏览最高商品</h2><br>
+                <div class="pList clearfix tran">
+
+                    {% for foo in month_look_top_goods0_3 %}
+                        <a href="../detailpage/{{ foo.id }}">
+						<dl>
+							<dt>
+								<span class="abl"></span>
+								<img src="/static/media/{{ foo.picture }}" style="width: 286px;height: 286px" />
+								<span class="abr"></span>
+							</dt>
+							<dd>{{ foo.title }}</dd>
+							<dd><span>￥{{ foo.price }}</span>&emsp; 月浏览 {{ foo.look }}</dd>
+						</dl>
+					</a>
+                    {% endfor %}
+
+
+
+
+				</div>
+
+                <div class="pList clearfix tran">
+
+                    {% for foo in month_look_top_goods4_7 %}
+                        <a href="../detailpage/{{ foo.id }}">
+						<dl>
+							<dt>
+								<span class="abl"></span>
+								<img src="/static/media/{{ foo.picture }}" style="width: 286px;height: 286px" />
+								<span class="abr"></span>
+							</dt>
+							<dd>{{ foo.title }}</dd>
+							<dd><span>￥{{ foo.price }}</span>&emsp; 月浏览 {{ foo.look }}</dd>
+						</dl>
+					</a>
+                    {% endfor %}
+
+
+				</div>
+
+
+			</div>
+		</div>
+
+		<!--返回顶部-->
+		<div class="gotop" style="top: 400px;right: 8px">
+			<a href="../../personal_shopcar/">
+			<dl>
+				<dt><img src="/static/img/gt1.png"/></dt>
+				<dd>去购<br />物车</dd>
+			</dl>
+			</a>
+
+			<a href="../../personal_index">
+			<dl>
+				<dt><img src="/static/img/gt3.png"/></dt>
+				<dd>个人<br />中心</dd>
+			</dl>
+			</a>
+			<a href="#" class="toptop" style="display: none">
+			<dl>
+				<dt><img src="/static/img/gt4.png"/></dt>
+				<dd>返回<br />顶部</dd>
+			</dl>
+			</a>
+			<p>400-800-8200</p>
+		</div>
+		
+		<!-------------------login-------------------------->
+		<!--footer-->
+		<div class="footer">
+			<div class="top">
+				<div class="wrapper">
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="/static/img/foot1.png"/></a>
+						<span class="fl">7天无理由退货</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="/static/img/foot2.png"/></a>
+						<span class="fl">15天免费换货</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="/static/img/foot3.png"/></a>
+						<span class="fl">满599包邮</span>
+					</div>
+					<div class="clearfix">
+						<a href="#2" class="fl"><img src="/static/img/foot4.png"/></a>
+						<span class="fl">手机特色服务</span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+		<script src="/static/js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/nav.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/static/js/jquery.flexslider-min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#home_slider').flexslider({
+					animation: 'slide',
+					controlNav: true,
+					directionNav: true,
+					animationLoop: true,
+					slideshow: true,
+					slideshowSpeed:4000,
+					useCSS: false
+				});
+
+			});
+		</script>
+		
+		
+	</body>
+</html>

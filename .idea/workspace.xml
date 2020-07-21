@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c18a907a-f02c-49f6-882a-c5da173db921" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/web$Unittests_in_text_py.coverage" NAME="Unittests in text.py Coverage Results" MODIFIED="1568892026722" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/PycharmProjects/python_日期项目/0919" />
+    <SUITE FILE_PATH="coverage/gouwu429$text.coverage" NAME="text Coverage Results" MODIFIED="1588213562281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/templates" />
+    <SUITE FILE_PATH="coverage/web$models.coverage" NAME="models Coverage Results" MODIFIED="1566479085965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/myapp" />
+    <SUITE FILE_PATH="coverage/web$text__1_.coverage" NAME="text (1) Coverage Results" MODIFIED="1568895750076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/PycharmProjects/python_日期项目/0919" />
+    <SUITE FILE_PATH="coverage/django$text.coverage" NAME="text Coverage Results" MODIFIED="1585539619744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/templates" />
+    <SUITE FILE_PATH="coverage/web$Unittests_for_text_Baidu.coverage" NAME="Unittests for text.Baidu Coverage Results" MODIFIED="1568891721627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/PycharmProjects/python_日期项目/0919" />
+    <SUITE FILE_PATH="coverage/web$Unittests_for_text_Baidu_test.coverage" NAME="Unittests for text.Baidu.test Coverage Results" MODIFIED="1568892017432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/PycharmProjects/python_日期项目/0919" />
+    <SUITE FILE_PATH="coverage/web$Unittests_for_fir_SinaTest.coverage" NAME="Unittests for fir.SinaTest Coverage Results" MODIFIED="1568894549687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/PycharmProjects/python_日期项目/0919" />
+    <SUITE FILE_PATH="coverage/web$Unittests_in_baidu_py.coverage" NAME="Unittests in baidu.py Coverage Results" MODIFIED="1568895917774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/PycharmProjects/python_日期项目/0919" />
+    <SUITE FILE_PATH="coverage/web$Unittests_in_fir_py.coverage" NAME="Unittests in fir.py Coverage Results" MODIFIED="1568894471460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/PycharmProjects/python_日期项目/0919" />
+    <SUITE FILE_PATH="coverage/web$Unittests_for_baidu_BaiduTest.coverage" NAME="Unittests for baidu.BaiduTest Coverage Results" MODIFIED="1568893751565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/PycharmProjects/python_日期项目/0919" />
+    <SUITE FILE_PATH="coverage/gouwu429$1.coverage" NAME="1 Coverage Results" MODIFIED="1588468026925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web" />
+    <SUITE FILE_PATH="coverage/web$text.coverage" NAME="text Coverage Results" MODIFIED="1566639025729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-2056414643">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="9" />
+          <entry key="txt" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Python" value="9" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myapp/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myapp/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2093">
+              <caret line="103" column="6" selection-start-line="103" selection-start-column="6" selection-end-line="103" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#6994#8173#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myapp/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1311">
+              <caret line="113" column="9" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="9" />
+              <folding>
+                <element signature="e#684#1848#0" />
+                <element signature="e#1896#2037#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2070">
+              <caret line="90" column="58" selection-start-line="90" selection-start-column="58" selection-end-line="90" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3151">
+              <caret line="137" column="86" selection-start-line="137" selection-start-column="68" selection-end-line="137" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all_products.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/all_products.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1978">
+              <caret line="86" column="60" selection-start-line="86" selection-start-column="60" selection-end-line="86" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="products_types.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/products_types.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1794">
+              <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ng-footer</find>
+      <find>【最家】非洲菊仿真花干花</find>
+      <find>/static/imgs/temp/proDet.jpg</find>
+      <find>/static/imgs/temp/proDet01.jpg</find>
+      <find>src=&quot;/static/imgs/temp/prosmall01.jpg&quot;</find>
+      <find>A10000</find>
+      <find>有效订单</find>
+      <find>返回文博疗养</find>
+      <find>left_nav</find>
+      <find>form</find>
+      <find>images/</find>
+      <find>账户安全</find>
+      <find>基础信息</find>
+      <find>images</find>
+      <find>/static/img/logo.png</find>
+      <find>01a796</find>
+      <find>add</find>
+      <find>sum</find>
+      <find>number</find>
+      <find>id</find>
+      <find>失败</find>
+      <find>img/</find>
+      <find>干花类型</find>
+      <find>快速</find>
+      <find>edit</find>
+      <find>json</find>
+      <find>list</find>
+      <find>结算</find>
+      <find>goods_title</find>
+      <find>num</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>您还没有登录</replace>
+      <replace>#</replace>
+      <replace>/static</replace>
+      <replace>/static/img</replace>
+      <replace>/static/imgs/</replace>
+      <replace>#111111</replace>
+      <replace>00b5a8</replace>
+      <replace>01a796</replace>
+      <replace>static/images/</replace>
+      <replace>/static/images/</replace>
+      <replace>/static/images</replace>
+      <replace>c10000</replace>
+      <replace>/static/img/</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/myapp/models.py" />
+        <option value="$PROJECT_DIR$/myapp/models.py" />
+        <option value="$PROJECT_DIR$/myapp/models.py" />
+        <option value="$PROJECT_DIR$/myapp/views.py" />
+        <option value="$PROJECT_DIR$/myapp/views.py" />
+        <option value="$PROJECT_DIR$/templates/personal_index.html" />
+        <option value="$PROJECT_DIR$/templates/personal_index.html" />
+        <option value="$PROJECT_DIR$/myapp/views.py" />
+        <option value="$PROJECT_DIR$/myapp/views.py" />
+        <option value="$PROJECT_DIR$/myapp/views.py" />
+        <option value="$PROJECT_DIR$/myapp/views.py" />
+        <option value="$PROJECT_DIR$/templatetags/filter.py" />
+        <option value="$PROJECT_DIR$/templates/personal_order.html" />
+        <option value="$PROJECT_DIR$/templates/personal_shopcar.html" />
+        <option value="$PROJECT_DIR$/myapp/admin.py" />
+        <option value="$PROJECT_DIR$/templates/其他风格显示.html" />
+        <option value="$PROJECT_DIR$/templates/翻牌风格.html" />
+        <option value="$PROJECT_DIR$/templates/products_type.html" />
+        <option value="$PROJECT_DIR$/templates/all_products.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/products_types.html" />
+        <option value="$PROJECT_DIR$/templates/personal_index.html" />
+        <option value="$PROJECT_DIR$/templates/personal_info.html" />
+        <option value="$PROJECT_DIR$/templates/personal_login_pass.html" />
+        <option value="$PROJECT_DIR$/templates/personal_post.html" />
+        <option value="$PROJECT_DIR$/templates/personal_resetPay.html" />
+        <option value="$PROJECT_DIR$/templates/personal_comment.html" />
+        <option value="$PROJECT_DIR$/templates/personal_address.html" />
+        <option value="$PROJECT_DIR$/templates/personal_shopcar.html" />
+        <option value="$PROJECT_DIR$/templates/wuliu.html" />
+        <option value="$PROJECT_DIR$/myapp/urls.py" />
+        <option value="$PROJECT_DIR$/myapp/models.py" />
+        <option value="$PROJECT_DIR$/templates/personal_order.html" />
+        <option value="$PROJECT_DIR$/myapp/views.py" />
+        <option value="$PROJECT_DIR$/myapp/urls.py" />
+        <option value="$PROJECT_DIR$/myapp/views.py" />
+        <option value="$PROJECT_DIR$/templates/personal_comment.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/personal_comment.html" />
+        <option value="$PROJECT_DIR$/templates/pay.html" />
+        <option value="$PROJECT_DIR$/templates/ok.html" />
+        <option value="$PROJECT_DIR$/myapp/urls.py" />
+        <option value="$PROJECT_DIR$/myapp/views.py" />
+        <option value="$PROJECT_DIR$/templates/Detail.html" />
+        <option value="$PROJECT_DIR$/templates/personal_order.html" />
+        <option value="$PROJECT_DIR$/myapp/models.py" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/Detail.html" />
+        <option value="$PROJECT_DIR$/templates/all_products.html" />
+        <option value="$PROJECT_DIR$/templates/products_types.html" />
+        <option value="$PROJECT_DIR$/web/1.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="746" />
+    <option name="y" value="4" />
+    <option name="width" value="640" />
+    <option name="height" value="512" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="gouwu429" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gouwu429" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gouwu429" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gouwu429" type="462c0819:PsiDirectoryNode" />
+              <item name="myapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gouwu429" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gouwu429" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\桌面\gouwu\myapp" />
+      <recent name="D:\桌面\基于django的购物网站设计与实现\static\js" />
+      <recent name="C:\Users\Administrator\PycharmProjects\python_日期项目\0919" />
+      <recent name="C:\Users\Administrator\PycharmProjects\python_日期项目\0919\testCase" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\桌面\gouwu\templates" />
+      <recent name="D:\桌面\基于django的购物网站设计与实现\static\img" />
+      <recent name="D:\桌面\基于django的购物网站设计与实现\static\images" />
+      <recent name="D:\桌面\基于django的购物网站设计与实现\templates" />
+      <recent name="D:\桌面\基于django的购物网站设计与实现\static\css" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.1">
+    <configuration name="1.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/基于django的购物网站设计与实现/templates/1.html" />
+    <configuration name="测试.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/个人博客后台/templates/测试.html" />
+    <configuration name="shopcar1.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/基于django的购物网站设计与实现/templates/shopcar1.html" />
+    <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="web" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/web" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web/1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="text" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="web" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/templates" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/templates/text.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="web" type="Python.DjangoServer" factoryName="Django server">
+      <module name="me_web" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Administrator\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.web" />
+      <item itemvalue="JavaScript Debug.测试.html" />
+      <item itemvalue="JavaScript Debug.1.html" />
+      <item itemvalue="JavaScript Debug.shopcar1.html" />
+      <item itemvalue="Python.text" />
+      <item itemvalue="Python.1" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.1" />
+        <item itemvalue="Python.text" />
+        <item itemvalue="JavaScript Debug.1.html" />
+        <item itemvalue="JavaScript Debug.shopcar1.html" />
+        <item itemvalue="JavaScript Debug.测试.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c18a907a-f02c-49f6-882a-c5da173db921" name="Default Changelist" comment="" />
+      <created>1566358327850</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566358327850</updated>
+      <workItem from="1566358331873" duration="715000" />
+      <workItem from="1566374215615" duration="191000" />
+      <workItem from="1566374492966" duration="235000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_baidu_BaiduTest - 2019.09.19 at 19h 49m 20s.xml">
+      <configuration name="Unittests for baidu.BaiduTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_fir_SinaTest - 2019.09.19 at 19h 50m 28s.xml">
+      <configuration name="Unittests for fir.SinaTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_fir_py - 2019.09.19 at 19h 52m 01s.xml">
+      <configuration name="Unittests in fir.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_fir_SinaTest - 2019.09.19 at 19h 56m 43s.xml">
+      <configuration name="Unittests for fir.SinaTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_fir_SinaTest - 2019.09.19 at 19h 57m 06s.xml">
+      <configuration name="Unittests for fir.SinaTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_fir_SinaTest - 2019.09.19 at 20h 00m 03s.xml">
+      <configuration name="Unittests for fir.SinaTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_fir_py - 2019.09.19 at 20h 01m 22s.xml">
+      <configuration name="Unittests in fir.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_fir_SinaTest - 2019.09.19 at 20h 01m 44s.xml">
+      <configuration name="Unittests for fir.SinaTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_fir_SinaTest - 2019.09.19 at 20h 02m 50s.xml">
+      <configuration name="Unittests for fir.SinaTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_baidu_py - 2019.09.19 at 20h 25m 26s.xml">
+      <configuration name="Unittests in baidu.py" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1141000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5048596" side_tool="true" weight="0.2550415" />
+      <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3282353" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32941177" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43890867" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4951404" weight="0.33096084" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19849785" />
+      <window_info anchor="right" id="R Packages" />
+      <window_info anchor="right" id="R Graphics" />
+      <window_info anchor="right" id="Database" order="4" weight="0.39038876" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32983023" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3985765" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32919955" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="14" />
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointLogExpression">
+      <expression>
+        <expression-string>L=Login.objects.filter(username=username).first()
+    id=request.POST.get(&quot;id&quot;)
+    G=Goods.objects.filter(id=id).first()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>&lt;div class=&quot;wall&quot; &gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;统计作者：{{ p1 }}&lt;/a&gt;&lt;/div&gt;</expression-string>
+        <language-id>HTML</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/myapp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2093">
+          <caret line="103" column="6" selection-start-line="103" selection-start-column="6" selection-end-line="103" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#6994#8173#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myapp/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="113" column="9" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="9" />
+          <folding>
+            <element signature="e#684#1848#0" />
+            <element signature="e#1896#2037#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2070">
+          <caret line="90" column="58" selection-start-line="90" selection-start-column="58" selection-end-line="90" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3151">
+          <caret line="137" column="86" selection-start-line="137" selection-start-column="68" selection-end-line="137" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/all_products.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1978">
+          <caret line="86" column="60" selection-start-line="86" selection-start-column="60" selection-end-line="86" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/products_types.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1794">
+          <caret line="78" column="29" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
