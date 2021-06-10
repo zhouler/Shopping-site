@@ -1,4 +1,4 @@
-Django==1.8
+Django==2.2.24
 DjangoUeditor==1.8
 django-filter==2.0.0
 django-filters==0.2.1
